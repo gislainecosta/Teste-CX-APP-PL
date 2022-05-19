@@ -1,15 +1,15 @@
 {
-  "name": "Test APP",
+  "name": "Teste Gislaine",
   "author": {
-    "name": "Rodolfo Oliveira",
-    "email": "rodolfo.oliveira@eteg.com.br",
-    "url": "https://eteg.com.br"
+    "name": "Gislaine Costa",
+    "email": "devgislainecosta@gmail.com",
+    "url": "https://github.com/gislainecosta/Teste-CX-APP-PL"
   },
   "defaultLocale": "pt",
   "private": true,
   "location": {
     "support": {
-      "user_sidebar": "assets/iframe.html"
+      "ticket_sidebar": "assets/iframe.html"
     }
   },
   "parameters": [
