@@ -55,8 +55,6 @@ const listTickets = () => {
     client.request(`/api/v2/users/${id}/tickets/requested`).then((res) => {
       const tickets = res.tickets
 
-      console.log(tickets)
-
       const list = tickets.map(function (ticket) {
         return `<li><b>Título:</b> ${ticket.subject}</li>`;
       })

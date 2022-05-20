@@ -17,17 +17,16 @@ const Main = async () => {
   const App = document.getElementById("app");
   let appBody = `
   <div id="main-content">
-    <p>Insira o CEP</p>
+    <h1>Insira um comentário com Endereço</h1>
     
     <section>
-      <input name="cep" id="input-cep" type="text" maxlength="8" placeholder="Digite somente números"/>
-      <button id="button-cep">Consultar CEP</button>
+      <input name="cep" id="input-cep" type="text" maxlength="8" placeholder="CEP (somente números)"/>
+      <button id="button-cep">Inserir Endereço</button>
     </section>
-    
-    <button id="button-tickets">Listar Tickets</button>
 
-    <section>
-      <p>Tickets anteriores</p>
+    <section class='tickets-list'>
+      <h1>Listar tickets anteriores</h1>
+      <button id="button-tickets">Gerar Lista</button>
       <ol id="ticket-list">
       </ol>
     </section>
