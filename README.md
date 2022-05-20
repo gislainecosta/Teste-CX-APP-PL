@@ -1,6 +1,6 @@
 # Teste ETEG CX APP
 
-Teste para a vaga de Desenvolvedor Fullstack - Pleno
+Teste para a vaga de Desenvolvedor Fullstack - Pleno realizado por Gislaine Costa
 
 
 ### O Desafio
