@@ -17,6 +17,10 @@ const Main = async () => {
   const App = document.getElementById("app");
   let appBody = `
   <div id="main-content">
+    <section style="display: none" class='loading-container'>
+      <img src='../images/loading.gif' alt='loading'/>
+    </section>
+    
     <h1>Insira um comentário com Endereço</h1>
     
     <section>

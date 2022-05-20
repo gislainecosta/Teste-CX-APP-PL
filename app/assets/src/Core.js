@@ -1,6 +1,7 @@
 const client = ZAFClient.init();
 
 const searchCEP = () => {
+  document.querySelector(".loading-container").style.display = "inline"
   const cep = document.querySelector("#input-cep").value
   
   client.get('ticket')
@@ -23,6 +24,7 @@ const searchCEP = () => {
             }
           }
 
+
           client.request({
             method: 'PUT',
             url: `/api/v2/tickets/${ticket_id}`,
@@ -31,10 +33,11 @@ const searchCEP = () => {
             secure: true
           }).then(function (data) {
             console.log("Ticket update successfully", data)
+            document.querySelector(".loading-container").style.display = "none"
           }).catch(function (e) {
             console.log(`Error request ${e}`);
+            document.querySelector(".loading-container").style.display = "none"
           })
-
         })
         .catch(function (e) {
           console.log(`Error request ${e}`);
