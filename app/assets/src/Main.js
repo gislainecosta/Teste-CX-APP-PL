@@ -25,6 +25,12 @@ const Main = async () => {
     </section>
     
     <button id="button-tickets">Listar Tickets</button>
+
+    <section>
+      <p>Tickets anteriores</p>
+      <ol id="ticket-list">
+      </ol>
+    </section>
   </div>`;
 
   App.innerHTML = appBody;

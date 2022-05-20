@@ -53,7 +53,16 @@ const listTickets = () => {
     const id = res.ticket.requester.id
 
     client.request(`/api/v2/users/${id}/tickets/requested`).then((res) => {
-      console.log(res.tickets);
+      const tickets = res.tickets
+
+      console.log(tickets)
+
+      const list = tickets.map(function (ticket) {
+        return `<li><b>Título:</b> ${ticket.subject}</li>`;
+      })
+
+      document.getElementById('ticket-list').innerHTML = list;
+
     })
   })
   .catch(function (e) {
