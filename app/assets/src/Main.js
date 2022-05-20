@@ -7,20 +7,24 @@ client.metadata().then((metadata) => {
   settings = metadata.settings;
 });
 
+client.on("app.registered", (e) => {
+  document.getElementById("button-cep").addEventListener("click", Core.searchCEP);
+  document.getElementById("button-tickets").addEventListener("click", Core.listTickets);
+});
+
 
 const Main = async () => {
-  const functions = Core
   const App = document.getElementById("app");
   let appBody = `
   <div id="main-content">
     <p>Insira o CEP</p>
     
     <section>
-      <input type="number" id="cep" name="cep" placeholder="CEP" />
-      <button onClick=''>Consultar CEP</button>
+      <input name="cep" id="input-cep" type="text" maxlength="8" placeholder="Digite somente números"/>
+      <button id="button-cep">Consultar CEP</button>
     </section>
     
-    <button onClick=''>Listar Tickets</button>
+    <button id="button-tickets">Listar Tickets</button>
   </div>`;
 
   App.innerHTML = appBody;
