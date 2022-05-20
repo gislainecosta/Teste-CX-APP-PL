@@ -5,6 +5,7 @@ let settings;
 
 client.metadata().then((metadata) => {
   settings = metadata.settings;
+  Core.getTicketInfo()
 });
 
 client.on("app.registered", (e) => {
